@@ -32,6 +32,8 @@ public class Main {
         System.out.print("Pasirinkite norima punkta:");
     }
 
+
+
         public static void startProgram() throws InterruptedException {
 
         boolean quit = false;
@@ -44,60 +46,58 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("\nTIESINE IR DVEJETAINE PAIESKA - Tiesine paieska");
-                    Search.addNumbers();
                     Search.linearSearch();
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
                     break;
                 case 2:
-                    System.out.println("\nTIESINE IR DVEJETAINE PAIESKA - Dvejetaine paieska");
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    Search.binarySearch();
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
                     break;
                 case 3:
                     System.out.println("\nRUSIAVIMO ALGORITMAI - Skaiciai");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    printMenu();*/
                     break;
                 case 4:
                     System.out.println("\nRUSIAVIMO ALGORITMAI - Simboliai");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    printMenu();*/
                 case 5:
                     System.out.println("\nRUSIAVIMO ALGORITMAI - Tekstas");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    printMenu();*/
                     break;
                 case 6:
                     System.out.println("\nTIESINES DUOMENU STRUKTUROS - Stekas");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    printMenu();*/
                     break;
                 case 7:
                     System.out.println("\nTIESINES DUOMENU STRUKTUROS - Eile");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    printMenu();*/
                     break;
                 case 8:
                     System.out.println("\nTIESINES DUOMENU STRUKTUROS - Sarasas");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    printMenu();*/
                     break;
                 case 9:
                     System.out.println("\nTIESINES DUOMENU STRUKTUROS - Vektorius");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    printMenu();*/
                     break;
                 case 10:
                     System.out.println("\nCOMPOSITE PROJEKTAVIMO SABLONAS - Idejimas");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    printMenu();*/
                     break;
                 case 11:
                     System.out.println("\nCOMPOSITE PROJEKTAVIMO SABLONAS - Atvaizdavimas");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/
+                    printMenu();*/
                     break;
                 case 0:
                     quit = true;
