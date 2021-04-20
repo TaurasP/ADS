@@ -3,13 +3,13 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws InterruptedException {
         startProgram();
     }
 
-    public static void printMainMenu() {
+    public static void printMenu() {
         System.out.println("\n---------------------------MENIU---------------------------");
         System.out.println("---------------TIESINE IR DVEJETAINE PAIESKA---------------");
         System.out.println("1. Tiesine paieska.");
@@ -33,9 +33,11 @@ public class Main {
     }
 
         public static void startProgram() throws InterruptedException {
+
         boolean quit = false;
         int choice;
-        printMainMenu();
+        printMenu();
+
         while(!quit) {
             choice = scanner.nextInt();
             scanner.nextLine();
@@ -43,6 +45,8 @@ public class Main {
             switch (choice) {
                 case 1:
                     System.out.println("\nTIESINE IR DVEJETAINE PAIESKA - Tiesine paieska");
+                    Search.addNumbers();
+                    Search.linearSearch();
                     /*TimeUnit.SECONDS.sleep(3);
                     printMainMenu();*/
                     break;
@@ -73,7 +77,7 @@ public class Main {
                 case 7:
                     System.out.println("\nTIESINES DUOMENU STRUKTUROS - Eile");
                     /*TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();*/;
+                    printMainMenu();*/
                     break;
                 case 8:
                     System.out.println("\nTIESINES DUOMENU STRUKTUROS - Sarasas");
@@ -101,7 +105,7 @@ public class Main {
                 default:
                     System.out.println("\nTokio punkto nera.");
                     TimeUnit.SECONDS.sleep(3);
-                    printMainMenu();
+                    printMenu();
                     break;
             }
         }
