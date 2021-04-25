@@ -82,23 +82,24 @@ public class Main {
                     printMenu();
                     break;
                 case 4:
-                    System.out.println("\nRUSIAVIMO ALGORITMAI - Skaiciai");
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMenu();*/
+                    NumbersSort.sortNumbers();
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
                     break;
                 case 5:
-                    System.out.println("\nRUSIAVIMO ALGORITMAI - Simboliai");
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMenu();*/
+                    CharsSort.sortChars();
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
+                    break;
                 case 6:
-                    System.out.println("\nRUSIAVIMO ALGORITMAI - Tekstas");
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMenu();*/
+                    TextSort.sortStrings();
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
                     break;
                 case 7:
-                    System.out.println("\nTIESINES DUOMENU STRUKTUROS - Stekas");
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMenu();*/
+                    LinearDataStructures.simulateStack();
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
                     break;
                 case 8:
                     System.out.println("\nTIESINES DUOMENU STRUKTUROS - Eile");

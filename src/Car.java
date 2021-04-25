@@ -73,6 +73,7 @@ public class Car {
 
         System.out.print("Iveskite norima ivesti skaiciu kieki: ");
         numTotal = scanner.nextInt();
+        scanner.nextLine();
         numArray = new int[numTotal];
 
         for (int i = 0; i < numArray.length; i++) {
