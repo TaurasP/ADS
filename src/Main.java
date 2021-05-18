@@ -71,7 +71,6 @@ public class Main {
                     printMenu();
                     break;
                 case 2:
-                    //System.out.println("\nTIESINE IR DVEJETAINE PAIESKA - Tiesine paieska pagal raktini zodi is automobilio objekto.");
                     Car.linearCarsSearch(cars);
                     TimeUnit.SECONDS.sleep(3);
                     printMenu();
@@ -102,17 +101,17 @@ public class Main {
                     printMenu();
                     break;
                 case 8:
-                    System.out.println("\nTIESINES DUOMENU STRUKTUROS - Eile");
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMenu();*/
+                    LinearDataStructures.simulateQueue();
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
                     break;
                 case 9:
-                    System.out.println("\nTIESINES DUOMENU STRUKTUROS - Sarasas");
+                    LinearDataStructures.simulateList();
                     /*TimeUnit.SECONDS.sleep(3);
                     printMenu();*/
                     break;
                 case 10:
-                    System.out.println("\nTIESINES DUOMENU STRUKTUROS - Vektorius");
+                    LinearDataStructures.simulateVector();
                     /*TimeUnit.SECONDS.sleep(3);
                     printMenu();*/
                     break;

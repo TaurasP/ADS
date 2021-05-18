@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Car {
-    private String manufacturer;
-    private String model;
+    private final String manufacturer;
+    private final String model;
     private int year;
     private String color;
     private int kilowatts;

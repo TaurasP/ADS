@@ -1,5 +1,5 @@
 public class NumbersSort {
-    public void sort(int arr[])
+    public static void sort(int arr[])
     {
         int n = arr.length;
 
@@ -21,7 +21,7 @@ public class NumbersSort {
 
     // To heapify a subtree rooted with node i which is
     // an index in arr[]. n is size of heap
-    void heapify(int arr[], int n, int i)
+    public static void heapify(int arr[], int n, int i)
     {
         int largest = i; // Initialize largest as root
         int l = 2 * i + 1; // left = 2*i + 1
@@ -47,7 +47,7 @@ public class NumbersSort {
     }
 
     /* A utility function to print array of size n */
-    static void printArray(int arr[])
+    public static void printArray(int arr[])
     {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
@@ -64,7 +64,7 @@ public class NumbersSort {
         NumbersSort ob = new NumbersSort();
         ob.sort(arr);
 
-        System.out.println("Sorted array is");
+        System.out.print("Jusu surusiuoti skaiciai: ");
         printArray(arr);
     }
 }

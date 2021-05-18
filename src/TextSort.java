@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TextSort {
 
-    public static Scanner scanner = new Scanner(System.in);
+    public static final Scanner scanner = new Scanner(System.in);
 
     public static String[] scanStrings() {
         String s;
