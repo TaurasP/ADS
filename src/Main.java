@@ -52,8 +52,6 @@ public class Main {
         System.out.print("Pasirinkite norima punkta:");
     }
 
-
-
         public static void startProgram(List<Car> cars) throws InterruptedException {
 
         boolean quit = false;
@@ -107,13 +105,13 @@ public class Main {
                     break;
                 case 9:
                     LinearDataStructures.simulateList();
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMenu();*/
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
                     break;
                 case 10:
-                    LinearDataStructures.simulateVector();
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMenu();*/
+                    LinearDataStructures.simulateVector(cars);
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
                     break;
                 case 11:
                     System.out.println("\nCOMPOSITE PROJEKTAVIMO SABLONAS - Idejimas");
