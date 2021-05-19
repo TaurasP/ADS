@@ -4,21 +4,30 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 
     private static final Scanner scanner = new Scanner(System.in);
+    public static List<Car> cars = new ArrayList<>();
+    public static Company company = new Company();
 
     public static void main(String[] args) throws InterruptedException {
-        startProgram(createCars());
+        startProgram(createCarsAndProperty());
     }
 
-    public static List<Car> createCars() {
-        List<Car> cars = new ArrayList<>();
+    public static List<Car> createCarsAndProperty() {
+        Apartment apartment1 = new Apartment(75.00f, "Vilniaus g. 1, Vilnius", 3);
+        Apartment apartment2 = new Apartment(100.00f, "Gedimino pr. 1, Vilnius", 4);
 
-        Car mazdaCX5 = new Car("Mazda", "CX-5");
-        Car mazda5 = new Car("Mazda", "5");
-        Car bmwX5 = new Car("BMW", "X5");
+        Car mazdaCX5 = new Car("Mazda", "CX-5", 2016);
+        Car mazda5 = new Car("Mazda", "5", 2007);
+        Car bmwX5 = new Car("BMW", "X5", 2020);
 
         cars.add(mazdaCX5);
         cars.add(mazda5);
         cars.add(bmwX5);
+
+        company.addProperty(apartment1);
+        company.addProperty(apartment2);
+        company.addProperty(mazdaCX5);
+        company.addProperty(mazda5);
+        company.addProperty(bmwX5);
 
         return cars;
     }
@@ -52,7 +61,14 @@ public class Main {
         System.out.print("Pasirinkite norima punkta:");
     }
 
-        public static void startProgram(List<Car> cars) throws InterruptedException {
+    public static void showCars() {
+        System.out.println("Automobiliai: ");
+        for(Car c : cars) {
+            System.out.println(c.getManufacturer() + " " + c.getModel());
+        }
+    }
+
+    public static void startProgram(List<Car> cars) throws InterruptedException {
 
         boolean quit = false;
         int choice;
@@ -69,6 +85,7 @@ public class Main {
                     printMenu();
                     break;
                 case 2:
+                    showCars();
                     Car.linearCarsSearch(cars);
                     TimeUnit.SECONDS.sleep(3);
                     printMenu();
@@ -114,14 +131,13 @@ public class Main {
                     printMenu();
                     break;
                 case 11:
-                    System.out.println("\nCOMPOSITE PROJEKTAVIMO SABLONAS - Idejimas");
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMenu();*/
+                    Company.addProperty();
+                    printMenu();
                     break;
                 case 12:
-                    System.out.println("\nCOMPOSITE PROJEKTAVIMO SABLONAS - Atvaizdavimas");
-                    /*TimeUnit.SECONDS.sleep(3);
-                    printMenu();*/
+                    company.showPropertyDetails();
+                    TimeUnit.SECONDS.sleep(3);
+                    printMenu();
                     break;
                 case 0:
                     quit = true;

@@ -1,17 +1,17 @@
 import java.util.*;
 
-public class Car {
+public class Car implements Property{
     private final String manufacturer;
     private final String model;
     private int year;
-    private String color;
+    /*private String color;
     private int kilowatts;
     private String fuelType;
     private String transmissionType;
     private String driveWheels;
-    private double fuelTankCapacity;
+    private double fuelTankCapacity;*/
 
-    public Car(String manufacturer, String model, int year, String color, int kilowatts, String fuelType,
+    /*public Car(String manufacturer, String model, int year, String color, int kilowatts, String fuelType,
                String transmissionType, String driveWheels, double fuelTankCapacity) {
         this.manufacturer = manufacturer;
         this.model = model;
@@ -22,11 +22,17 @@ public class Car {
         this.transmissionType = transmissionType;
         this.driveWheels = driveWheels;
         this.fuelTankCapacity = fuelTankCapacity;
-    }
+    }*/
 
     public Car(String manufacturer, String model) {
         this.manufacturer = manufacturer;
         this.model = model;
+    }
+
+    public Car(String manufacturer, String model, int year) {
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.year = year;
     }
 
     public String getManufacturer() {
@@ -41,28 +47,9 @@ public class Car {
         return year;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public int getKilowatts() {
-        return kilowatts;
-    }
-
-    public String getFuelType() {
-        return fuelType;
-    }
-
-    public String getTransmissionType() {
-        return transmissionType;
-    }
-
-    public String getDriveWheels() {
-        return driveWheels;
-    }
-
-    public double getFuelTankCapacity() {
-        return fuelTankCapacity;
+    @Override
+    public void showPropertyDetails() {
+        System.out.println("Automobilis: " + manufacturer + " " + model + ", " + year + "m.");
     }
 
     public static Scanner scanner = new Scanner(System.in);
@@ -130,7 +117,7 @@ public class Car {
 
         for (int i = 0; i < cars.size(); i++) {
             if (cars.get(i).getManufacturer().equalsIgnoreCase(key) || cars.get(i).getModel().equalsIgnoreCase(key)) {
-                System.out.println("Rastas automobilis " + cars.get(i).getManufacturer() + " " + cars.get(i).getModel() + ", indeksas: " + i + ".");
+                System.out.println("Rastas automobilis: " + cars.get(i).getManufacturer() + " " + cars.get(i).getModel() + ", indeksas: " + i + ".");
                 return;
             }
         }
@@ -164,5 +151,4 @@ public class Car {
             System.out.println("Toks skaicius nerastas!");
         }
     }
-
 }
